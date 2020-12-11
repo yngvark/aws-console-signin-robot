@@ -9,7 +9,7 @@ install: compile ## - Installs the program on your local file system, to /usr/lo
 	cp aws-console-login ~/.local/bin
 	sed -i "s/someuser/$USER/g" ~/.local/bin/aws-console-login
 	export CURDIR=`pwd`
-	sed -i "s&path_to_this_repo&$CURDIR&" ~/.local/bin/aws-console-login
+	sed -i "s&path_to_this_repo&$$CURDIR&" ~/.local/bin/aws-console-login
 
 compile: ## -
 	./gradlew shadowJar
