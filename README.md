@@ -35,7 +35,7 @@ the following:
 ### Usage alternative: Put shortcut on the application menu
 
 ```bash
-cat <<EOF >>~/.local/share/applications/my-aws-account-dev
+cat <<EOF >> ~/.local/share/applications/my-aws-account-dev.desktop
 [Desktop Entry]
 Version=1.0
 Type=Application
