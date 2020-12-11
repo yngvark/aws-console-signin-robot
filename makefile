@@ -5,6 +5,12 @@ help: ## Print this menu
 init: ## -
 	@echo See pre-requiesites in README
 
+install: compile ## - Installs the program on your local file system, to /usr/local/bin
+	cp aws-console-login /usr/local/bin/aws-console-login
+	sed -i "s/someuser/$USER/g" /usr/local/bin/aws-console-login
+	export CURDIR=`pwd`
+	sed -i "s&path_to_this_repo&$CURDIR&" /usr/local/bin/aws-console-login
+
 compile: ## -
 	./gradlew shadowJar
 

@@ -14,29 +14,25 @@ Clone this repo and run
 
 ```bash
 git clone git@github.com:yngvark/aws-console-signin-robot.git
-
-cd aws-console-signin-robot
-./gradlew shadowJar
-
-wget https://raw.githubusercontent.com/yngvark/aws-console-signin-robot/main/aws-console-login -O /usr/local/bin/aws-console-login
-sed -i "s/someuser/$USER/g" /usr/local/bin/aws-console-login
-export CURDIR="`pwd`"
-sed -i "s&path_to_this_repo&$CURDIR&" /usr/local/bin/aws-console-login
-chmod +x /usr/local/bin/aws-console-login
+make install
 ```
 
-Now, in the file aws-console-login, replace `path_to_this_repo` with the path to where you cloned this repository
+To verify that it works, run `aws-console-login 123`, and see weird stuff happening:
+
+```bash
+$ aws-console-login 123
+Logging in to AWS account: 123
+^F123
+^[
+```
+
+That's fine, this happens because we're not in a browser.
 
 As for usage, there are alternatives. The one that I currently use is the following:
 
 ### Usage alternative: Put shortcut on the application menu
 
 ```bash
-```
-
-
-
-
 cat <<EOF >>~/.local/share/applications/my-aws-account-dev
 [Desktop Entry]
 Version=1.0
@@ -54,3 +50,5 @@ This will probably not be useful, as the java program immediately starts pressin
 will see that it works.
 
 ```
+
+XXX
