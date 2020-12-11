@@ -8,7 +8,7 @@ import java.io.File
 val robot = RobotHelper(Robot())
 class ClassUsedJustToGetExecutableFilename {}
 fun main(args: Array<String>) {
-    if (args.size <= 1) {
+    if (args.isEmpty()) {
         val name = File(
             ClassUsedJustToGetExecutableFilename::class.java.getProtectionDomain()
                 .codeSource.location.path
@@ -17,18 +17,15 @@ fun main(args: Array<String>) {
         return
     }
 
-    for (arg in args) {
-        println("arg: $arg")
-    }
-    val searchTerm = args[1]
-    println("Logging in to AWS account: $searchTerm")
+    val accountId = args[0]
+    println("Logging in to AWS account: $accountId")
 
 //    robot.sleep(200)
 //        .type("HELLO")
 
     robot
         .pressAndRelease(KeyEvent.VK_CONTROL, KeyEvent.VK_F)
-        .type(searchTerm)
+        .type(accountId)
         .pressAndRelease(KeyEvent.VK_ENTER)
         .pressAndRelease(KeyEvent.VK_ESCAPE)
         .pressAndRelease(KeyEvent.VK_TAB)
