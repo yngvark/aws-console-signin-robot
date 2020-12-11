@@ -29,7 +29,8 @@ Logging in to AWS account: 123
 
 That's fine, this happens because we're not in a browser.
 
-As for usage, there are alternatives. The one that I currently use is the following:
+To run the command when we're in a browser focus, there are alternatives. The one that I currently use in XFCE is
+the following:
 
 ### Usage alternative: Put shortcut on the application menu
 
@@ -45,11 +46,5 @@ Terminal=false
 EOF
 ```
 
-### Usage alternative: Run command manually to test
+### Usage alternative: With rofi
 
-This will probably not be useful, as the java program immediately starts pressing keys. But at least you
-will see that it works.
-
-```
-
-XXX

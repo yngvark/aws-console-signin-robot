@@ -17,12 +17,18 @@ fun main(args: Array<String>) {
         return
     }
 
-    val accountId = args[0]
+    for (arg in args) {
+        println("Arg: $arg")
+    }
+
+    val accountId = args[args.size - 1]
     println("Logging in to AWS account: $accountId")
 
-//    robot.sleep(200)
-//        .type("HELLO")
+//    hello()
+    login(accountId)
+}
 
+private fun login(accountId: String) {
     robot
         .pressAndRelease(KeyEvent.VK_CONTROL, KeyEvent.VK_F)
         .type(accountId)
@@ -31,6 +37,12 @@ fun main(args: Array<String>) {
         .pressAndRelease(KeyEvent.VK_TAB)
         .pressAndRelease(KeyEvent.VK_SPACE)
         .pressAndRelease(KeyEvent.VK_TAB)
-        .pressAndRelease(KeyEvent.VK_ENTER
+        .pressAndRelease(
+            KeyEvent.VK_ENTER
         )
+}
+
+private fun hello() {
+    robot.sleep(200)
+        .type("HELLO2")
 }
