@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+# This script will be called from outside the user's current terminal, so we need to setup sdkman so Java works.
+export SDKMAN_DIR="/home/someuser/.sdkman"
+[[ -s "/home/someuser/.sdkman/bin/sdkman-init.sh" ]] && source "/home/someuser/.sdkman/bin/sdkman-init.sh"
+
+if [ "$#" -ge 1 ]; then
+    ACCOUNTID=$(echo $1 | grep -Eo '[0-9]+')
+    java -jar /home/yngvar/yk/git/yngvark/aws-console-signin-robot/build/libs/*.jar $ACCOUNTID >> /tmp/awsyklog.txt
+
+    # Put account
+    printf $ACCOUNTID | xsel --input --clipboard
+else
+    echo "some-account (123456789012)"
+    echo "some-other-account (987654321012)"
+fi
