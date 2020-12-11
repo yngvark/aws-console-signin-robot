@@ -24,8 +24,8 @@ fun main(args: Array<String>) {
     val accountId = args[args.size - 1]
     println("Logging in to AWS account: $accountId")
 
-//    hello()
     login(accountId)
+//    hello()
 }
 
 private fun login(accountId: String) {
