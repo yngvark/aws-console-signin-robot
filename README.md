@@ -1,5 +1,5 @@
 # aws-console-signin-robot
-A tool that logs in to a specified account number
+A tool that logs in to a specified account number in AWS Console
 
 ## Requirements
 
