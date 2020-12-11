@@ -14,6 +14,7 @@ Clone this repo and run
 
 ```bash
 git clone git@github.com:yngvark/aws-console-signin-robot.git
+cd aws-console-signin-robot
 make install
 ```
 
