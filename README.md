@@ -1,8 +1,8 @@
 # aws-console-signin-robot
 
 A tool that logs in to a specified account number in AWS Console. All it really does is CTRL+F on the signin
-page for an AWS acccount ID, clicks tab and presses enter. Useful if you have tons of accounts on the signin
-page and don't want to waste time findin the account.
+page for an AWS account ID, clicks tab and presses enter. Useful if you have tons of accounts on the signin
+page and don't want to waste time finding the account.
 
 ## Requirements
 
