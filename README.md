@@ -13,9 +13,14 @@ page and don't want to waste time finding the account.
 
 ## Installation
 
-Clone this repo and run
+Run
 
 ```bash
+git clone https://github.com/yngvark/robothelper-lib.git
+cd robothelper-lib
+make publish
+cd ..
+
 git clone git@github.com:yngvark/aws-console-signin-robot.git
 cd aws-console-signin-robot
 make install
